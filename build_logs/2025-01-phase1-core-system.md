@@ -1,6 +1,6 @@
 # Phase 1 – Core System Bring-up
 
-Date: 2025-01-XX  
+Date: 2025-01-07  
 Author: Akash
 
 ## Hardware connected
