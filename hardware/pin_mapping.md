@@ -23,6 +23,14 @@
 ## User Input
 - GPIO25: Manual capture button
 
+## Sensor-Specific Allocation
+
+### BME690
+- Interface: I2C (shared)
+- Power: 3.3 V
+- Fan: GPIO24 (via MOSFET)
+
+
 ## Notes
 This mapping may evolve slightly during integration,
 but GPIO roles are kept stable once sensors are validated.
