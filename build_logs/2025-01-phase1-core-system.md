@@ -25,3 +25,8 @@ Author: Akash
 
 ## Notes
 This phase establishes the base compute and I/O platform for all further sensing modules.
+
+## Calibration Note
+- Final current calibration pending arrival of DC current meter
+- Electrical topology validated prior to calibration
+

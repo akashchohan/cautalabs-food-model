@@ -26,6 +26,10 @@
 - RTC battery module
 - 0.96" OLED display (I2C)
 - 5V DC fan (VOC chamber)
+- Momentary push button with LED ring
+  - Used as manual acquisition trigger
+  - Switch contacts connected to Raspberry Pi GPIO
+
 
 ## Mechanical / Optical
 - 60° collimator lenses

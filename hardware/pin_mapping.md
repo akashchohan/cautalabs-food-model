@@ -30,6 +30,11 @@
 - Power: 3.3 V
 - Fan: GPIO24 (via MOSFET)
 
+### MLX90614
+- Interface: I2C
+- Power: 3.3 V
+- Address: 0x5A
+
 
 ## Notes
 This mapping may evolve slightly during integration,
