@@ -35,7 +35,38 @@
 - Power: 3.3 V
 - Address: 0x5A
 
+## NIR Illumination System (Low-side MOSFET Switching)
+
+| Function | Component | Raspberry Pi Pin | BCM GPIO | Notes |
+|--------|----------|------------------|----------|-------|
+| 730 nm LED control | MOSFET TRIG | Pin 11 | GPIO 17 | 1 s pulse tested |
+| 850 nm LED control | MOSFET TRIG | Pin 13 | GPIO 27 | Reserved |
+| 940 nm LED control | MOSFET TRIG | Pin 15 | GPIO 22 | Reserved |
+| MOSFET power | VIN+ | Pin 2 | 5V | Shared 5V rail |
+| MOSFET ground | GND | Pin 6 | GND | Common ground |
+
+## LED Driver (LM2596 – Constant Current Mode)
+
+- VIN+ → Raspberry Pi 5V
+- VIN− → Raspberry Pi GND
+- OUT+ → LED Anode (+)
+- OUT− → Not used directly (low-side switching via MOSFET)
+
+**Configured per LED:**
+- Output voltage: 2.2–2.5 V
+- Current limit: 500–600 mA
+- Operation mode: pulsed only (<100 ms recommended)
+
+## Camera Interfaces
+
+| Device | Interface | Notes |
+|------|----------|------|
+| Camera Module 3 NoIR | CSI CAM0 | Primary imaging |
+| Camera Module 3 NoIR | CSI CAM1 | Secondary / reference |
 
 ## Notes
 This mapping may evolve slightly during integration,
 but GPIO roles are kept stable once sensors are validated.
+- MOSFET module is low-side switching (VIN+ internally tied to OUT+)
+- Ground is switched, not 5V
+- Only one NIR LED is enabled at a time
