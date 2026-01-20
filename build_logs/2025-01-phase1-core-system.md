@@ -29,4 +29,13 @@ This phase establishes the base compute and I/O platform for all further sensing
 ## Calibration Note
 - Final current calibration pending arrival of DC current meter
 - Electrical topology validated prior to calibration
+okay so just 
+
+## VL53L8CX Bring-up
+
+- Connected in I2C mode
+- LPn tied to 3.3V
+- Detected at I2C address 0x29
+- Sensor responds on bus correctly
+- Python driver mismatch noted (L8CX vs L4CD)
 

@@ -1,0 +1,4 @@
+- Sequential GPIO control of 730/850/940 nm LEDs verified
+- Each LED activated individually via MOSFET for 2 seconds
+- No cross-talk observed
+- GPIO control confirmed stable

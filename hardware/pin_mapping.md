@@ -64,9 +64,37 @@
 | Camera Module 3 NoIR | CSI CAM0 | Primary imaging |
 | Camera Module 3 NoIR | CSI CAM1 | Secondary / reference |
 
+## User Interface
+
+| Component | Pin | Raspberry Pi GPIO | Notes |
+|--------|----|------------------|------|
+| Button (switch) | SW | GPIO 23 | Pull-up enabled |
+| Button LED | LED | GPIO 16 | Status indicator |
+
+## Optional / Reserved Pins
+- AS7343: I, G (not connected)
+- VL53L8CX: INT (reserved), MISO (SPI only)
+
+## User Interface
+
+| Component | Function | GPIO | Notes |
+|--------|--------|------|------|
+| Button | Input (momentary) | GPIO 23 | Pull-up enabled |
+| Button LED | Status indicator | GPIO 16 | 330–470 Ω resistor |
+
+
 ## Notes
 This mapping may evolve slightly during integration,
 but GPIO roles are kept stable once sensors are validated.
 - MOSFET module is low-side switching (VIN+ internally tied to OUT+)
 - Ground is switched, not 5V
 - Only one NIR LED is enabled at a time
+
+Sensor	Typical Address
+BME690	0x76 or 0x77
+OLED SSD1306	0x3C
+MLX90614	0x5A
+AS7343	0x39
+VL53L8CX	0x29
+
+python3 mlx90614_test.py
