@@ -17,3 +17,10 @@ All hardware components of the CautaLabs Food Model were individually tested and
 
 ## Result
 Hardware bring-up completed successfully. System ready for software integration and dataset acquisition.
+
+Note:
+Python-level I2C scanning via Blinka (i2c.scan()) was avoided due to
+a known incompatibility with Raspberry Pi 5 and Python 3.13.
+All devices were validated using system-level i2cdetect and
+direct I2C register access in Python.
+
