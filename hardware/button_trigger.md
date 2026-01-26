@@ -10,6 +10,13 @@ useful for repeatable experiments and demonstrations.
 - One contact connected to GND
 - Internal pull-up resistor used (software)
 
+## User Interface
+
+| Component | Function | GPIO | Notes |
+|--------|--------|------|------|
+| Button | Input (momentary) | GPIO 23 | Pull-up enabled |
+| Button LED | Status indicator | GPIO 16 | 330–470 Ω resistor |
+
 ## Logic
 - Button released → GPIO HIGH (idle)
 - Button pressed → GPIO LOW (trigger)

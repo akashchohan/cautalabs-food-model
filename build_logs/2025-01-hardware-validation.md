@@ -15,6 +15,11 @@ All hardware components of the CautaLabs Food Model were individually tested and
 - User button input
 - OLED display
 
+- Unified Python hardware smoke test implemented
+- Raw I2C verification used for AS7343 and VL53L8CX
+- OLED tested using PIL default font (no external font dependency)
+
+
 ## Result
 Hardware bring-up completed successfully. System ready for software integration and dataset acquisition.
 
